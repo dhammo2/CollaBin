@@ -78,3 +78,20 @@ li div.newcomment button {
 #footer {
     font-size: 95%;
 }
+
+#container {
+    margin-top: 0%;
+    height: 0%;
+
+}
+
+#first {
+    width: 10%;
+    float: left;
+    height: 200px;
+}
+#second {
+    width: 90%;
+    float: left;
+    height: 200px;
+}

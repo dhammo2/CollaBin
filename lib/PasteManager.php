@@ -16,9 +16,11 @@ class PasteManager
      * @param $content
      * @return bool|string UID or false on error
      */
-    function savePaste($content)
+	 
+    function savePaste($content, $expS)
     {
-        $uid = $this->mkuid();
+		// We pass the expiry String to the makeID function
+        $uid = $this->mkuid($expS);
         do {
             $path = $this->fn($uid, 'paste');
         } while (file_exists($path));
@@ -108,9 +110,15 @@ class PasteManager
      * @param int $len
      * @return string
      */
-    public function mkuid($len = 8)
+	 
+	 /**
+	 * Adjusted naming principle
+	 *
+	 * The deletion date is encoded into the filename.
+	 */
+	 
+    public function mkuid($expS, $len = 16)
     {
-
         $hex = md5("yourSaltHere" . uniqid("", true));
 
         $pack = pack('H*', $hex);
@@ -123,6 +131,9 @@ class PasteManager
         while (strlen($uid) < $len) {
             $uid .= gen_uuid(22);
         }
+		
+		//The expiry string forms the first 8 digits of the unique pasteID
+		$uid = $expS . $uid;
 
         return substr($uid, 0, $len);
     }
