@@ -7,3 +7,5 @@ CollaBin' (short for collaborating) is an open-source self-hosted PasteBin that 
 * Range of Expiry Date Options
 
 To install, clone this somewhere under your webroot (PHP required) and make the data directory writable.
+
+CollaBin' is a fork of commie by splitbrain.
