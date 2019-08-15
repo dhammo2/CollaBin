@@ -10,6 +10,22 @@ CollaBin' (short for collaborating) is an open-source self-hosted PasteBin that 
 
 ## Live Demo
  Use CollaBin' at https://collaboratewith.danielhammocks.uk
+ 
+ ## Usage
+ 
+ ### Creating a Paste
+ 
+ ![CollaBin' Paste Creation](ImageExamples/cb_CreatingPaste.png)
+ 
+ ### Adding a Comment
+ 
+ ![CollaBin' Adding Comment](ImageExamples/cb_AddingComment.png)
+ 
+ ### Viewing Comments
+ 
+ ![CollaBin' Viewing Comments](ImageExamples/cb_ViewingComments.png)
+ 
+ 
 
 ## Installation
 To install, clone this Git somewhere under your webroot (PHP required) and make the data directory writable.
