@@ -36,7 +36,7 @@ CollaBin' (short for collaborating) is an open-source self-hosted PasteBin that 
  
 
 ## Installation
-To install, clone this Git somewhere under your webroot (PHP required) and make the data directory writable.
+To install, upload everything in the `src` folder somewhere under your webroot (PHP required) and make the `data` directory writable.
 
 ## Roots
 CollaBin' is a fork of commie by splitbrain.
