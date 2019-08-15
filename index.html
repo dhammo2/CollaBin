@@ -1,161 +1,94 @@
+<!doctype html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <link href="lib/style.css" rel="stylesheet"/>
-    <link href="lib/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-    <title>CollaBin</title>
-</head>
-<body>
-<pre id="paste">
-<div id="container">
-    <div id="first">
-		<code><span style="display:block;line-height:1.7px; font-size: 2px; font-weight:bold;white-space:pre;font-family: monospace;color: white;">                                                                                                                                                          
+  <head>
+      <meta charset="utf-8">
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link href="lib/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+      <title>CollaBin' - An Open-Source Self-Hosted PasteBin</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css">
+      <link rel="stylesheet" href="scribbler-global.css">
+      <link rel="stylesheet" href="scribbler-landing.css">
+      <link href="lib/style.css" rel="stylesheet"/>
+      <link rel="author" href="humans.txt">
+  </head>
+  <body>
+    <nav>
+      <div class="logo"></div>
+      <ul class="menu">
+        <div class="menu__item toggle"><span></span></div>
+        <li class="menu__item"><a href="https://github.com/dhammo2/CollaBin" class="link link--dark"><i class="fa fa-github"></i>Github</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h1 class="hero__title">CollaBin'</h1>
+      <p class="hero__description">CollaBin' (short for collaborating) is an open-source self-hosted PasteBin that enables the sharing and collaboration of code or text files.</p>
+    </div>
+    <div class="hero__terminal">
+	  <pre id="paste"></pre>
+	  <div id="help">☛ Click the line numbers to comment</div>
+      <pre>
+        <!-- Place your demo code here -->
+		<div class="paste_text" id="new">
+			<label for="newpaste">Create a new paste:</label>
+			<textarea class="newpaste" id="newpaste"></textarea><br/>
+			Remember: All Pastes are PUBLIC!
+			<!-- Dropdown box for user to define expiration time -->
+			<select id="paste_expiry" name="paste_expiry">
+				<option value="" disabled selected>Paste Expiration</option>
+				<option value='1d'>1 Day</option>
+				<option value='3d'>3 Days</option>
+				<option value='1w'>1 Week</option>
+				<option value='2w'>2 Weeks</option>
+				<option value='1m'>1 Month</option>
+				<option value='3m'>3 Months</option>
+				<option value='6m'>6 Months</option>
+				<option value='1y'>1 Year</option>
+				<option value='inf'>Infinite</option>
+			</select> <button>Save new Paste</button>
+		</div>
+      </pre>
+    </div>
+    <div class="wrapper">
+      <div class="feature">
+        <div class="feature__item">
+          <h3 class="section__title">Automatic Syntax Highlighting</h3>
+          <p>Code language is automatically detected and the syntax coloured accordingly.</p>
+        </div>
+        <div class="feature__item">
+          <h3 class="section__title">Line Commenting (Includes Author Name)</h3>
+          <p>Share your pastes and allow collaboraters to add comments to specific lines.</p>
+        </div>
+        <div class="feature__item">
+          <h3 class="section__title">Expiration Options</h3>
+          <p>Pastes can be set to expire in days, weeks, months or years. Alternatively pastes can be kept indefinitely.</p>
+        </div>
+      </div>
+      <div class="callout">
+        <p>Click Below to Visit a Paste by ID</p>
+        <button class="button--primary" onclick="myFunction()">Find Paste by ID</button>
+            <script>
+            function myFunction() {
+              var pasteID = prompt("Enter the Paste ID");
+              if (pasteID != null) {
+                var loc = window.location.pathname;
+                window.location.href = loc + pasteID;
+                location.reload();
+              }
+            }
+            </script>
 
-
-
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-
-
-	      @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&
-	    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                                                                                                 	
-	   @@@@@@@,                             .@@@@@@@                                                                                                   	
-	   @@@@@                                   @@@@@                                                                                                   	
-	  .@@@@@                                   @@@@@                                                                                                   
-   (@@@@@@@@@@@@                                   @@@@@@@@@@@@/                                                                                           
-  @@@@@@@@@@@@@@#                                 %@@@@@@@@@@@@@@                                                                                          
- @@@@@@.   /@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*   ,@@@@@@                                                                                         
- @@@@@       @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@       @@@@@                                                                                         
- @@@@@         #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@#         @@@@@                                                                                         
- @@@@@                  %@@@@@@@@@@@@@@%    @@@@(            @@@@@                                                                                         
- @@@@@          .&@@@@@@@@@@@@@@%           .@@@@            @@@@@                                                                                         
- @@@@@   .&@@@@@@@@@@@@@@%                   @@@@@           @@@@@                                                                                         
- @@@@@,@@@@@@@@@@@%                           @@@@           @@@@@                                                                                         
- @@@@@ @@@@#                                  &@@@@          @@@@@                                                                                         
- @@@@@ @@@@@                                   @@@@.         @@@@@                                                                                         
- @@@@@  @@@@.                                  (@@@@         @@@@@                                                                                         
- @@@@@  (@@@@                                   @@@@#        @@@@@                                                                                         
- @@@@@   @@@@#                                  .@@@@        @@@@@                                                                                         
- @@@@@   .@@@@                                   @@@@@       @@@@@                                                                                         
- @@@@@    @@@@&                                   @@@@       @@@@@                                                                                         
- @@@@@     @@@@                    &@@@           @@@@@      @@@@@                                                                                         
- @@@@@     @@@@@                  *@@@@@           @@@@.     @@@@@                                                                                         
- @@@@@      @@@@.                  @@@@@@#         #@@@@     @@@@@                                                                                         
- @@@@@      #@@@@                  @@@@@@@@         @@@@(    @@@@@                                                                                         
- @@@@@       @@@@(                 /@@@@@@@@        .@@@@    @@@@@                                                                                         
- @@@@@       ,@@@@                  @@@@@@@@@&       @@@@&   @@@@@                                                                                         
- @@@@@        @@@@@                 *@@@@@@@@@@,      @@@@   @@@@@                                                                                         
- @@@@@         @@@@.                 @@@@@@@@@@@@.      @@@  @@@@@       @@@@@                                                                             
- @@@@@         @@@@@                  @@@@@@@@@@@@@&         @@@@@      /@@@@@@@                                                                           
- @@@@@          @@@@(                  @@@@@@@@@@@@@@@/          %      /@@@@@@@@@                                                                         
- @@@@@          %@@@@                   @@@@@@@@@@@@@@@@@&              /@@@@@@@@@@@              *@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@(                     
- @@@@@           @@@@&                   @@@@@@@@@@@@@@@@@@@@@%         /@@@@@@@@@@@@@          @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@.                  
- @@@@@           ,@@@@                    %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@      &@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                 
- @@@@@            @@@@@       .@@@@@@@,     @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@      @@@@                                @@@@@@*                
- @@@@@             @@@@,&@@@@@@@@@@@@@@(      @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@     ,@                                  @@@@@&                
- @@@@@             #@@@@@@@@@@@@(               @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@    @                                  @@@@@&                
- @@@@@.             @@@@@(                        /@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@&   
- /@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@        @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@     (@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
-  ,@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@         %@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@      @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-	 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@.        .#@@@@@@@@@@@@@@@@@@@@@                                                              @@@@@
-									/@@@@@@@@@@@@&                                                                @@@@@
-									/@@@@@@@@@@&                                                                  @@@@@
-									/@@@@@@@@@                                                                    @@@@@
-									/@@@@@@@      @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-									 @@@@@       @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@.
-										   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@%   
-										   @@@@@@                                                        @@@@@@     
-										   @@@@@@                                                        @@@@@@     
-										   @@@@@@       *######(         *######/         (######/       @@@@@@     
-										   @@@@@@     .@@@@@@@@@@&     *@@@@@@@@@@%     &@@@@@@@@@@#     @@@@@@     
-										   @@@@@@     /@@      @@@     #@@      @@@     @@@      @@&     @@@@@@     
-										   @@@@@@     /@@      @@@     #@@      @@@     @@@      @@&     @@@@@@     
-										   @@@@@@     /@@      @@@     #@@      @@@     @@@      @@&     @@@@@@     
-										   @@@@@@     /@@      @@@     #@@      @@@     @@@      @@&     @@@@@@     
-										   @@@@@@     /@@      @@@     #@@      @@@     @@@      @@&     @@@@@@     
-										   @@@@@@     /@@      @@@     #@@      @@@     @@@      @@&     @@@@@@     
-										   @@@@@@     /@@      @@@     #@@      @@@     @@@      @@&     @@@@@@     
-										   @@@@@@     /@@      @@@     #@@      @@@     @@@      @@&     @@@@@@     
-										   @@@@@@     /@@      @@@     #@@      @@@     @@@      @@&     @@@@@@     
-										   @@@@@@     /@@      @@@     #@@      @@@     @@@      @@&     @@@@@@     
-										   @@@@@@     /@@      @@@     #@@      @@@     @@@      @@&     @@@@@@     
-										   @@@@@@     /@@      @@@     #@@      @@@     @@@      @@&     @@@@@@     
-										   @@@@@@     /@@      @@@     #@@      @@@     @@@      @@&     @@@@@@     
-										   @@@@@@     /@@      @@@     #@@      @@@     @@@      @@&     @@@@@@     
-										   @@@@@@     /@@      @@@     #@@      @@@     @@@      @@&     @@@@@@     
-										   @@@@@@     /@@      @@@     #@@      @@@     @@@      @@&     @@@@@@     
-										   @@@@@@     /@@      @@@     #@@      @@@     @@@      @@&     @@@@@@     
-										   @@@@@@     /@@      @@@     #@@      @@@     @@@      @@&     @@@@@@     
-										   @@@@@@     *@@@@@@@@@@@     /@@@@@@@@@@&     @@@@@@@@@@@%     @@@@@@     
-										   @@@@@@       @@@@@@@@.        @@@@@@@@        .@@@@@@@@       @@@@@@     
-										   @@@@@@                                                        @@@@@@     
-										    @@@@@@.                                                     @@@@@@      
-										    .@@@@@@@@@&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&@@@@@@@@@.      
-										      @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@        
-										        .@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@,          
-		</span></code>
-	</div>
-    <div id="second">
-	 _____       _ _      ______ _       
-	/  __ \     | | |     | ___ (_)      
-	| /  \/ ___ | | | __ _| |_/ /_ _ __  
-	| |    / _ \| | |/ _` | ___ \ | '_ \ 
-	| \__/\ (_) | | | (_| | |_/ / | | | |
-	 \____/\___/|_|_|\__,_\____/|_|_| |_|
-
-	CollaBin' (short for collaborating) is an open-source self-hosted PasteBin that enables the sharing and collaboration of code or text files.
-					
-			Automatic Syntax Highlighting // Line Commenting (Includes Author Name) // Range of Expiry Date Options 
-	</div>
-</div>
-</pre>
-<div id="help">☛ Click the line numbers to comment</div>
-
-<div id="new">
-    <label for="newpaste">Create a new paste:</label>
-    <textarea id="newpaste"></textarea><br/>
-	
-	<!-- Dropdown box for user to define expiration time -->
-	<select id="paste_expiry" name="paste_expiry">
-		<option value="" disabled selected>Paste Expiration</option>
-		<option value='1d'>1 Day</option>
-		<option value='3d'>3 Days</option>
-		<option value='1w'>1 Week</option>
-		<option value='2w'>2 Weeks</option>
-		<option value='1m'>1 Month</option>
-		<option value='3m'>3 Months</option>
-		<option value='6m'>6 Months</option>
-		<option value='1y'>1 Year</option>
-		<option value='inf'>Infinite</option>
-	</select>
-    <button>Save new Paste</button>
-	
-		
-    Remember: All Pastes are PUBLIC!
-</div>
-
-<div id="footer">
-    CollaBin' is available on <a href="">github</a> and is a fork of <a href="https://github.com/splitbrain/commie">commie</a> by <a href="http://www.splitbrain.org">splitbrain</a>.
-</div>
-
-
-<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-<script src="lib/js.cookie.js"></script>
-<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert&amp;autoload=false"></script>
-<script src="lib/script.js"></script>
-
-</body>
+      </div>
+    </div>
+    <footer class="footer">CollaBin' is available on <a href="https://github.com/dhammo2/CollaBin" target="_blank" class="link link--light">GitHub</a> and is a fork of <a href="https://github.com/splitbrain/commie" target="_blank" class="link link--light">commie</a> by <a href="http://www.splitbrain.org" target="_blank" class="link link--light">splitbrain</a> that utilises the <a href="https://github.com/amiechen/codrops-scribbler" target="_blank" class="link link--light">Scribber Web Template</a>.</footer>
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="lib/js.cookie.js"></script>
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert&amp;autoload=false"></script>
+    <script src="lib/script.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="scribbler.js"></script>
+  </body>
 </html>
