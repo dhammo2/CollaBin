@@ -6,6 +6,12 @@ CollaBin' (short for collaborating) is an open-source self-hosted PasteBin that 
 * Line Commenting (Includes Author Name)
 * Range of Expiry Date Options
 
-To install, clone this somewhere under your webroot (PHP required) and make the data directory writable.
+## Live Demo
+ Use CollaBin' at https://collaboratewith.danielhammocks.uk
 
+## Installation
+To install, clone this Git somewhere under your webroot (PHP required) and make the data directory writable.
+
+## Roots
 CollaBin' is a fork of commie by splitbrain.
+CollaBin's responsive web design is based on Scribbler by Amie Chen.
