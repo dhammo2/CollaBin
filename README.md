@@ -1,6 +1,6 @@
-# CollaBin
+# CollaBin'
 
-## What is CollaBin?
+## What is CollaBin'?
 CollaBin' (short for collaborating) is an open-source self-hosted PasteBin that enables the sharing and collaboration of code or text files.
 
 * Automatic Syntax Highlighting
@@ -11,7 +11,7 @@ CollaBin' (short for collaborating) is an open-source self-hosted PasteBin that 
 <img src="./ImageExamples/cb_Overview.png" width=50%>
 </p>
 
-## Who uses CollaBin?
+## Who uses CollaBin'?
 
 CollaBin' is great for teams of developers and coders but also particularly useful for teachers and lecturers who are fed up of receiving messy unformatted code assistance requests via email! Since CollaBin' allows students to share syntactically coloured code  you don't need to worry about downloading malicious code files, poorly formatted plain text copies, and you can add comments directly where students need to make improvements.
 
