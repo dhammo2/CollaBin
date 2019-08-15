@@ -6,7 +6,9 @@ CollaBin' (short for collaborating) is an open-source self-hosted PasteBin that 
 * Line Commenting (Includes Author Name)
 * Range of Expiry Date Options
 
-![CollaBin' Main Page](ImageExamples/cb_Overview.png)
+<p align="center">
+<img src="./ImageExamples/cb_Overview.png" width=50%>
+</p>
 
 ## Live Demo
  Use CollaBin' at https://collaboratewith.danielhammocks.uk
@@ -15,15 +17,21 @@ CollaBin' (short for collaborating) is an open-source self-hosted PasteBin that 
  
  ### Creating a Paste
  
- ![CollaBin' Paste Creation](ImageExamples/cb_CreatingPaste.png)
+<p align="center">
+<img src="./ImageExamples/cb_CreatingPaste.png" width=50%>
+</p>
  
  ### Adding a Comment
  
- ![CollaBin' Adding Comment](ImageExamples/cb_AddingComment.png)
- 
+<p align="center">
+<img src="./ImageExamples/cb_AddingComment.png" width=50%>
+</p>
+
  ### Viewing Comments
  
- ![CollaBin' Viewing Comments](ImageExamples/cb_ViewingComments.png)
+<p align="center">
+<img src="./ImageExamples/cb_ViewingComments.png" width=50%>
+</p>
  
  
 
