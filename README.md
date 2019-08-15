@@ -6,6 +6,8 @@ CollaBin' (short for collaborating) is an open-source self-hosted PasteBin that 
 * Line Commenting (Includes Author Name)
 * Range of Expiry Date Options
 
+![CollaBin' Main Page](ImageExamples/cb_Overview.png)
+
 ## Live Demo
  Use CollaBin' at https://collaboratewith.danielhammocks.uk
 
